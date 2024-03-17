@@ -137,13 +137,15 @@ public class ContactDetailActivity extends AppCompatActivity {
     }
 
     private void compartirContacto() {
-        String numeroConPrefijo = getPrefijoPais(contactoActual + contactoActual.getTelefono());
-        String contactInfo = "Contacto: " + contactoActual.getNombre() +
-                "\nTeléfono: " + numeroConPrefijo;
+        String infoParaCompartir = "Detalles del Contacto:\n" +
+                "Nombre: " + contactoActual.getNombre() + "\n" +
+                "Teléfono: " + contactoActual.getTelefono() + "\n" +
+                "Latitud: " + String.format(Locale.getDefault(), "%.4f", contactoActual.getLatitud()) + "\n" +
+                "Longitud: " + String.format(Locale.getDefault(), "%.4f", contactoActual.getLongitud());
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, contactInfo);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, infoParaCompartir);
         sendIntent.setType("text/plain");
 
         Intent shareIntent = Intent.createChooser(sendIntent, null);
