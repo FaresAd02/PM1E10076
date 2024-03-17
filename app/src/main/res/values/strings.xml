@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ExamenPM1</string>
+
+    <string name="add_contact">+</string>
+    <string name="update_contact">Actualizar Contacto</string>
+    <string name="delete_contact">Eliminar Contacto</string>
+    <string name="nombre_hint">Ingrese su nombre</string>
+    <string name="telefono_hint">Ingrese su telefono</string>
+
+    <string name="save">Guardar</string>
+
+    <string name="latitud_hint">Latitud</string>
+    <string name="longitud_hint">Longitud</string>
+    <string name="latitud_required">La latitud es requerida.</string>
+    <string name="longitud_required">La longitud es requerida.</string>
+    <string name="firma_required">La firma es requerida.</string>
+    <string name="firma">Firma del contacto</string>
+    <string name="clear_signature">Limpiar firma</string>
+
+</resources>

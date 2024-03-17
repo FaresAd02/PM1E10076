@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/nombre_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_hint"
+        android:inputType="textPersonName"
+        android:maxLength="50"
+        android:layout_margin="10dp" />
+
+  <EditText
+        android:id="@+id/telefono_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefono_hint"
+        android:inputType="phone"
+        android:layout_below="@id/nombre_edit_text"
+      android:maxLength="8"
+        android:layout_margin="10dp" />
+
+    <EditText
+        android:id="@+id/latitud_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/latitud_hint"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/telefono_edit_text"
+        android:layout_margin="10dp" />
+
+    <EditText
+        android:id="@+id/longitud_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/longitud_hint"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/latitud_edit_text"
+        android:layout_margin="10dp" />
+
+  <Button
+      android:id="@+id/button_get_latitud"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/longitud_edit_text"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:text="Obtener Latitud y Longitud" />
+
+  <com.example.crud.SignatureView
+      android:id="@+id/signature_view"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:layout_below="@id/longitud_edit_text"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="70dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="#FFFFFF" />
+
+  <Button
+      android:id="@+id/clear_signature_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/signature_view"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:text="@string/clear_signature" />
+
+  <Button
+      android:id="@+id/save_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/clear_signature_button"
+      android:layout_centerHorizontal="true"
+      android:text="@string/save"
+      android:layout_margin="10dp" />
+
+</RelativeLayout>
